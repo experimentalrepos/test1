@@ -49,7 +49,7 @@ resource "azurerm_function_app" "example" {
     app_settings = {
         FUNCTIONS_WORKER_RUNTIME = "dotnet"
         FUNCTIONS_EXTENSION_VERSION = "~2"
-        WEBSITE_NODE_DEFAULT_VERSION = "8.11.1"
+        WEBSITE_NODE_DEFAULT_VERSION = "8.11.3"
         AzureWebJobsSecretStorageType = "Files"
         }
 }
@@ -65,7 +65,7 @@ resource "azurerm_function_app_slot" "example" {
     app_settings = {
         FUNCTIONS_WORKER_RUNTIME = "dotnet"
         FUNCTIONS_EXTENSION_VERSION = "~2"
-        WEBSITE_NODE_DEFAULT_VERSION = "8.11.2"
+        WEBSITE_NODE_DEFAULT_VERSION = "8.11.4"
         AzureWebJobsSecretStorageType = "Files"
         }
 }
