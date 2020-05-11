@@ -1,4 +1,13 @@
 # Configure the Azure provider
+ terraform {
+  required_version = ">= 0.11" 
+  backend "azurerm" {
+  storage_account_name = "terraformteststrg"
+    container_name       = "terraform"
+    key                  = "terraform.tfstate"
+	access_key  ="oZKXNq2KHAQZYwk6vv0EgeF4+7qM3C5VUrFo/md2B5iIHeTQCF5u+C1wmC2Yub/pBKk2bAJ1z4UY+F1ORS7PZQ=="
+	}
+}
 provider "azurerm" { 
     # The "feature" block is required for AzureRM provider 2.x. 
     # If you are using version 1.x, the "features" block is not allowed.
