@@ -37,7 +37,7 @@ resource "azurerm_function_app" "example" {
   app_service_plan_id       = azurerm_app_service_plan.example.id
   storage_account_name       = azurerm_storage_account.example.name
   storage_account_access_key = azurerm_storage_account.example.primary_access_key
-    app_settings{
+    app_settings = {
         FUNCTIONS_WORKER_RUNTIME = "dotnet"
         FUNCTIONS_EXTENSION_VERSION = "~2"
         WEBSITE_NODE_DEFAULT_VERSION = "8.11.1"
@@ -55,7 +55,7 @@ resource "azurerm_function_app_slot" "example" {
   storage_account_access_key = azurerm_storage_account.example.primary_access_key
   clientAffinityEnabled = "false"
   reserved = "false"
-    app_settings{
+    app_settings = {
         FUNCTIONS_WORKER_RUNTIME = "dotnet"
         FUNCTIONS_EXTENSION_VERSION = "~2"
         WEBSITE_NODE_DEFAULT_VERSION = "8.11.1"
